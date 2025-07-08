@@ -1,0 +1,258 @@
+---
+title: "Analsis sobre las barreras en el Acceso a la Salud"
+author: "Jose Prado"
+date: "2025-07-08"
+output: html_document
+---
+
+## Cargamos las base de datos
+```{r}
+data_2016 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2016.csv")
+View(data_2016)
+
+data_2017 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2017.csv")
+View(data_2017)
+
+data_2018 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2018.csv")
+View(data_2018)
+
+data_2019 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2019.csv")
+View(data_2019)
+
+data_2020 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2020.csv")
+View(data_2020)
+
+data_2021 <- read_csv("C:/Users/Lenovo/Downloads/Documents/metodologia final/data_2021.csv")
+View(data_2021)
+```
+
+##Código de Correlación Independientes y dependiente del Año 2016
+```{r}
+Presupuesto
+cor.test(data_2016$medicos, data_2016$presupuesto)
+plot(data_2016$presupuesto, data_2016$medicos,
+     main = "Presupuesto vs Médicos (2017)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2016), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2016$medicos, data_2016$ingreso)
+plot(data_2016$ingreso, data_2016$medicos,
+     main = "Ingreso vs Médicos (2017)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2016), col = "red", lwd = 2)
+
+Infraestructura
+cor.test(data_2016$medicos, data_2016$infraestructura)
+plot(data_2016$infraestructura, data_2016$medicos,
+     main = "Infraestructura vs Médicos (2017)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2016), col = "red", lwd = 2)
+```
+
+##Códigos de correlación Independiente con la dependiente del Año 2017
+```{r}
+Presupuesto
+cor.test(data_2017$medicos, data_2017$presupuesto)
+plot(data_2017$presupuesto, data_2017$medicos,
+     main = "Presupuesto vs Médicos (2017)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2017), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2017$medicos, data_2017$ingreso)
+plot(data_2017$ingreso, data_2017$medicos,
+     main = "Ingreso vs Médicos (2017)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2017), col = "red", lwd = 2)
+
+Infraestructura
+cor.test(data_2017$medicos, data_2017$infraestructura)
+
+plot(data_2017$infraestructura, data_2017$medicos,
+     main = "Infraestructura vs Médicos (2017)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2017), col = "red", lwd = 2)
+
+```
+
+##Códigos de Correlación Independiente y dependiente del Año 2018
+```{r}
+Presupuesto
+cor.test(data_2018$medicos, data_2018$presupuesto)
+plot(data_2018$presupuesto, data_2018$medicos,
+     main = "Presupuesto vs Médicos (2018)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2018), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2018$medicos, data_2018$ingreso)
+plot(data_2018$ingreso, data_2018$medicos,
+     main = "Ingreso vs Médicos (2018)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2018), col = "red", lwd = 2)
+
+Infraestructura
+cor.test(data_2018$medicos, data_2018$infraestructura)
+plot(data_2018$infraestructura, data_2018$medicos,
+     main = "Infraestructura vs Médicos (2018)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2018), col = "red", lwd = 2)
+```
+
+##Códigos de Correlación Independiente y dependiente del Año 2019
+```{r}
+Presupuesto
+cor.test(data_2019$medicos, data_2019$presupuesto)
+plot(data_2019$presupuesto, data_2019$medicos,
+     main = "Presupuesto vs Médicos (2019)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2019), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2019$medicos, data_2019$ingreso)
+plot(data_2019$ingreso, data_2019$medicos,
+     main = "Ingreso vs Médicos (2019)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2019), col = "red", lwd = 2)
+
+nfraestructura
+cor.test(data_2019$medicos, data_2019$infraestructura)
+plot(data_2019$infraestructura, data_2019$medicos,
+     main = "Infraestructura vs Médicos (2019)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2019), col = "red", lwd = 2)
+
+```
+
+##Códigos de Correlación Independiente y Dependiente 2020
+```{r}
+Presupuesto
+cor.test(data_2020$medicos, data_2020$presupuesto)
+plot(data_2020$presupuesto, data_2020$medicos,
+     main = "Presupuesto vs Médicos (2020)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2020), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2020$medicos, data_2020$ingreso)
+plot(data_2020$ingreso, data_2020$medicos,
+     main = "Ingreso vs Médicos (2020)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2020), col = "red", lwd = 2)
+
+Infraestructura
+cor.test(data_2020$medicos, data_2020$infraestructura)
+plot(data_2020$infraestructura, data_2020$medicos,
+     main = "Infraestructura vs Médicos (2020)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2020), col = "red", lwd = 2)
+```
+
+##Códigos de Correlación Independiente y Dependiente 2021
+```{r}
+Presupuesto
+cor.test(data_2021$medicos, data_2021$presupuesto)
+plot(data_2021$presupuesto, data_2021$medicos,
+     main = "Presupuesto vs Médicos (2021)",
+     xlab = "Presupuesto (%)", ylab = "Médicos", pch = 19, col = "blue")
+abline(lm(medicos ~ presupuesto, data = data_2021), col = "red", lwd = 2)
+
+Ingreso
+cor.test(data_2021$medicos, data_2021$ingreso)
+plot(data_2021$ingreso, data_2021$medicos,
+     main = "Ingreso vs Médicos (2021)",
+     xlab = "Ingreso", ylab = "Médicos", pch = 19, col = "green")
+abline(lm(medicos ~ ingreso, data = data_2021), col = "red", lwd = 2)
+
+Infraestructura
+cor.test(data_2021$medicos, data_2021$infraestructura)
+plot(data_2021$infraestructura, data_2021$medicos,
+     main = "Infraestructura vs Médicos (2021)",
+     xlab = "Infraestructura", ylab = "Médicos", pch = 19, col = "orange")
+abline(lm(medicos ~ infraestructura, data = data_2021), col = "red", lwd = 2)
+
+```
+
+##Codigos de Regresion Lineal Multiple 2016
+```{r}
+modelo_multiple_2016 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2016)
+
+summary(modelo_multiple_2016)
+
+dwplot(modelo_multiple_2016) +
+  labs(title = "Regresión Lineal Múltiple - Año 2016",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+```
+
+##Códigos de Regresión Lineal Múltiple 2017 
+```{r}
+modelo_multiple_2017 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2017)
+
+summary(modelo_multiple_2017)
+
+dwplot(modelo_multiple_2017) +
+  labs(title = "Regresión Lineal Múltiple - Año 2017",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+
+```
+
+##Códigos de Regresión Lineal Múltiple 2018
+```{r}
+modelo_multiple_2018 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2018)
+
+summary(modelo_multiple_2018)
+
+dwplot(modelo_multiple_2018) +
+  labs(title = "Regresión Lineal Múltiple - Año 2018",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+```
+
+##Códigos de Regresión Lineal Múltiple 2019 
+```{r}
+modelo_multiple_2019 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2019)
+
+summary(modelo_multiple_2019)
+
+dwplot(modelo_multiple_2019) +
+  labs(title = "Regresión Lineal Múltiple - Año 2019",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+```
+
+##Códigos de Regresión Lineal Múltiple 2020
+```{r}
+modelo_multiple_2020 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2020)
+                           
+summary(modelo_multiple_2020)
+                           
+dwplot(modelo_multiple_2020) +
+  labs(title = "Regresión Lineal Múltiple - Año 2020",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+```
+
+##Códigos de Regresión Lineal Múltiple 2021
+```{r}
+modelo_multiple_2021 <- lm(medicos ~ presupuesto + ingreso + infraestructura, data = data_2021)
+                           
+summary(modelo_multiple_2021)
+                  
+dwplot(modelo_multiple_2021) +
+  labs(title = "Regresión Lineal Múltiple - Año 2021",
+       x = "Estimación del coeficiente",
+       y = "Variables independientes") +
+  theme_minimal()
+```
+
+
+
+
